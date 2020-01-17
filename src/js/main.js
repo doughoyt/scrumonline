@@ -348,7 +348,7 @@ scrum.app.controller('MasterController', function ($http, $routeParams, $locatio
       return;
       
     $http.delete('/api/session/wipe/' + self.id).then(function (response){
-      $location.url("/404.html"); // Redirect to 404 when we wiped the session
+      $location.url("/"); // Redirect to main landing page when we wiped the session
     });
   }
   
