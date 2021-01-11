@@ -29,14 +29,14 @@ footer {
 }
 @media (min-width: 1200px) {
   .container-fluid.main, .container-fluid.navigation {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media (min-width: 1500px) {
   .container-fluid.main, .container-fluid.navigation {
-    padding-left: 220px;
-    padding-right: 220px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 
@@ -52,7 +52,7 @@ div.topic .form-control {
 @media(min-width: 1200px)
 {
   div.topic .form-control {
-    width: 500px;
+    width: 390px;
  }
 }
 

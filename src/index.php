@@ -1,7 +1,6 @@
 <?php
 include "config.php";
 include "templates/templates.php";
-include "sponsors.php";
 
 $templates = Template::getAll();
 
@@ -19,7 +18,7 @@ foreach($templates as $index=>$template)
   <meta charset="utf-8">
   <base href="/">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Online planning poker</title>
+  <title>GTS Scrum Poker</title>
   <meta name="description" content="Scrumpoker online is an open source web implementation of planning poker for scrum teams to determine the complexity of stories. It aims to integrate ticketing systems like JIRA, Github or Gitlab.">  
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,11 +32,20 @@ foreach($templates as $index=>$template)
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/scrumonline.css">
+	<script>
+	function drop(event) {
+		var data = event.dataTransfer.getData("text/uri-list");
+		event.preventDefault();
+		return false;
+	    }
+	function drag_over(event) {
+		event.preventDefault();
+		return false;
+	    }
+	</script>
 
-  <!-- Pretty cookie consent and styling -->
-  <?php include("templates/cookie_notice.php") ?>
 </head>
-<body ng-app="scrum-online">
+<body ng-app="scrum-online" ondragover="drag_over(event)" ondrop="drop(event)">
 <!--[if lt IE 8]>
    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -73,7 +81,6 @@ foreach($templates as $index=>$template)
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
-<script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
 <script src="/js//bootstrap.min.js"></script>
 <script src="/js/J2M.js"></script>
 <script type="text/javascript">
