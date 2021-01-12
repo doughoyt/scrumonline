@@ -9,7 +9,7 @@ $conn = array(
 );
 
 // This is used to create the join link
-$host = "https://scrumonline.local";
+$host = "https://localhost";
 
 $cardSets = [
     // Standard fibonaci like series of values
@@ -31,7 +31,9 @@ $cardSets = [
     // Canadian Cash format
     ['1', '2', '5', '10', '20', '50', '100'],
     // Standard fibonacci with shrug
-   ['1', '2', '3', '5', '8', '13', '&#F937;']
+    ['1', '2', '3', '5', '8', '13', '&#F937;'],
+    // Standard fibonaci like series of values with 0, 1/2, infinity, and shrug
+    ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', '&#8734;', '&#F937;']
 ];
 
 // Src tree for documentation linking from page
@@ -54,4 +56,9 @@ $jiraConfiguration = [
     'password' => '',
     'project' => '',
     'jql' => '',
+];
+
+//Configuration for Enable/Disable style elements
+$layout_switch = [
+    'enable_fork_banner' => true
 ];

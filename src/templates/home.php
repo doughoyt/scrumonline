@@ -8,7 +8,6 @@ include "config.php";
       <h2>Scrum Online</h2>
 	This is the GTS Agile Squad planning poker site.
     </p>
-    </form>
   </article>
 </div>
             

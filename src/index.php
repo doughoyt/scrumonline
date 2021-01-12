@@ -2,6 +2,7 @@
 include "config.php";
 include "templates/templates.php";
 
+
 $templates = Template::getAll();
 
 // Find all templates with their own navigation item
@@ -49,7 +50,6 @@ foreach($templates as $index=>$template)
 <!--[if lt IE 8]>
    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
 
 <!-- Top navigation bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
